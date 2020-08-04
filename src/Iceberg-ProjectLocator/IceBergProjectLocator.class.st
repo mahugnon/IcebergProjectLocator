@@ -20,9 +20,7 @@ IceBergProjectLocator >> locationOfProjectRepo: aProject [
 
 	| icebergRepository |
 	icebergRepository := IceRepository registry
-		detect: [ :repository | 
-			repository workingCopy packages
-				anySatisfy: [ :package | package name = aProject ] ]
+		detect: [ :repository | repository name = aProject ]
 		ifNone:
 			[ self error: 'No repository in Iceberg containing the needed files.' ].
 	icebergRepository location exists
