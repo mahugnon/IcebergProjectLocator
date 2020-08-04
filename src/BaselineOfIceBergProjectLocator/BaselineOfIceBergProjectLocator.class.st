@@ -1,6 +1,6 @@
 Class {
 	#name : #BaselineOfIceBergProjectLocator,
-	#superclass : #Object,
+	#superclass : #BaselineOf,
 	#category : #BaselineOfIceBergProjectLocator
 }
 
